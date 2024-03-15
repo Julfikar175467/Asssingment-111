@@ -1,5 +1,7 @@
 
 import './App.css'
+import Header from './component/header/header'
+import Banner from './component/main/banner'
 
 function App() {
   
@@ -7,7 +9,13 @@ function App() {
   return (
     <>
       
-      <h1>Vite + React</h1>
+      <div className='w-[1280px] mx-auto px-4 pt-5'>
+         <Header></Header>
+        {/* -------------------------main part-------------- */}
+         <div>
+          <Banner></Banner>
+         </div>
+      </div>
       
     </>
   )
