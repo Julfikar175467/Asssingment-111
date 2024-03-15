@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-const Blog = ({ blog }) => {
+const Blog = ({ blog,btnHandel }) => {
 
     const { recipe_image,  recipe_name, short_description, ingredients, preparing_time, calories } = blog
     return (
@@ -33,14 +33,15 @@ const Blog = ({ blog }) => {
                 </div>
 
             </div>
-            <button className="btn px-10 bg-[#0BE58A] hover:bg-[#0BE58A]">Watch Now</button>
+            <button className="btn px-10 bg-[#0BE58A] hover:bg-[#0BE58A] text-xl" onClick={()=>btnHandel(blog)}>Watch Now</button>
 
         </div>
     );
 };
 
 Blog.propTypes={
-    blog: PropTypes.object
+    blog: PropTypes.object,
+    btnHandel: PropTypes.func
 }
 
 export default Blog;
